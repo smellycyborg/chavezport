@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+* {
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h5 {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer {
+    text-align: center;
+    font-size: x-small;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.player--wrap {
+    position: relative;
+    padding-top: 56.25%;
+    margin: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.react--player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.center--text {
+    text-align: center;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.body--container {
+    width: 80vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    .body--container {
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+.icon--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.project--divs {
+    width: 50vw;
+}
+
+@media (max-width: 800px) {
+    .project--divs {
+        width: auto;
+    }
+}
+
+.inline {
+    display: inline-block;
+    text-align: left;
+}
+
+.float--left {
+    float: left;
+    margin-left: 15px;
+}
+
+.float--right {
+    float: right;
+    margin-right: 15px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    margin: 5px;
+    padding: 5px;
+}
+
+.icon:hover {
+    cursor: pointer;
 }
