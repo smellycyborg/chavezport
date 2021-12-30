@@ -17,7 +17,8 @@ const App: React.FC = () => {
 
   <div>
     <Footer link1='https://github.com/spumdonut' 
-    link2='https://www.linkedin.com/in/spumdonut/' />
+    link2='https://www.linkedin.com/in/spumdonut/' 
+    email='mailto:chavezworkmail@gmail.com'/>
   </div>
   </>
 }

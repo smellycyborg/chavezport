@@ -1,10 +1,11 @@
-import React from "react";
+import React, { HTMLAttributeReferrerPolicy } from "react";
 import { Icon } from '@iconify/react';
 import '../App.css';
 
 interface Props {
     link1: string,
     link2: string,
+    email: string
 }
 
 const click = (
@@ -16,7 +17,7 @@ const click = (
     console.log(text)
 }
 
-export const Footer: React.FC<Props> = ( { link1, link2 } ) => {
+export const Footer: React.FC<Props> = ( { link1, link2, email } ) => {
 
     return (
         <footer>
@@ -30,6 +31,11 @@ export const Footer: React.FC<Props> = ( { link1, link2 } ) => {
                 icon="ph:linkedin-logo-thin" height="42" 
                 onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
                     click(e, link2, 'clicked linkedin')
+                }}/>
+                <Icon className='icon' 
+                icon="emojione-monotone:e-mail" height="42"
+                onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
+                    click(e, email, 'clicked email')
                 }}/>
             </div>
             <p>site by chavez</p>

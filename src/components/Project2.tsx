@@ -20,7 +20,7 @@ const click1 = (
 export const Project2: React.FC<Props> = ( { name, link1 } ) => {
 
     return (
-        <div>
+        <div className='project--div--width'>
             <h5>{ name }</h5>
             <div className='player--wrap'>
             <Player 
