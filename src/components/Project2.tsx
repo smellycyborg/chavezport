@@ -5,10 +5,10 @@ import Player from 'react-player';
 
 interface Props {
     name: string,
-    link1: string,
+    link: string,
 }
 
-const click1 = (
+const click = (
     event: React.MouseEvent<Element, MouseEvent>, 
     link: string, 
     text: string
@@ -17,7 +17,7 @@ const click1 = (
     console.log(text)
 }
 
-export const Project2: React.FC<Props> = ( { name, link1 } ) => {
+export const Project2: React.FC<Props> = ( { name, link } ) => {
 
     return (
         <div className='project--div--width'>
@@ -41,7 +41,7 @@ export const Project2: React.FC<Props> = ( { name, link1 } ) => {
             
             <Icon className='icon' icon="uit:github-alt" height="22" 
                 onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
-                    click1(e, link1, 'clicked git')}} />
+                    click(e, link, 'clicked git')}} />
             </div>
         </div>
     )
