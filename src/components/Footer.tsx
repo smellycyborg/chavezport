@@ -1,4 +1,3 @@
-import React, { HTMLAttributeReferrerPolicy } from "react";
 import { Icon } from '@iconify/react';
 import '../App.css';
 
