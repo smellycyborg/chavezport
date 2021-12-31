@@ -7,7 +7,7 @@ interface Props {
     email: string
 }
 
-const click = (
+const clickOnIcon = (
     event: React.MouseEvent<Element, MouseEvent>, 
     link: string, 
     text: string
@@ -18,24 +18,33 @@ const click = (
 
 export const Footer: React.FC<Props> = ( { link1, link2, email } ) => {
 
+    const openGithubInNewWindow = (event: React.MouseEvent<Element, MouseEvent>) => {
+        clickOnIcon(event, link1, 'clicked github')
+    }
+
+    const openLinkedinInNewWindow = (event: React.MouseEvent<Element, MouseEvent>) => {
+        clickOnIcon(event, link2, 'clicked linkedin')
+    }
+
+    const openEmail = (event: React.MouseEvent<Element, MouseEvent>) => {
+        clickOnIcon(event, email, 'clicked email')
+    }
+    
+
     return (
         <footer>
             <div className='center'>
                 <Icon className='icon' 
                 icon="ph:github-logo-thin" height="39" 
-                onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
-                    click(e, link1, 'clicked github')
-                }}/>
+                onClick={ openGithubInNewWindow }/>
+
                 <Icon className='icon' 
                 icon="ph:linkedin-logo-thin" height="42" 
-                onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
-                    click(e, link2, 'clicked linkedin')
-                }}/>
+                onClick={ openLinkedinInNewWindow }/>
+
                 <Icon className='icon' 
                 icon="emojione-monotone:e-mail" height="42"
-                onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
-                    click(e, email, 'clicked email')
-                }}/>
+                onClick={ openEmail }/>
             </div>
             <p>site by chavez</p>
         </footer>
