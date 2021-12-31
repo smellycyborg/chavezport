@@ -19,6 +19,10 @@ const click = (
 
 export const Project2: React.FC<Props> = ( { name, link } ) => {
 
+    const openGithubInNewWindow = (event: React.MouseEvent<Element, MouseEvent>) => {
+        click(event, link, 'clicked git')
+    }
+
     return (
         <div className='project--div--width'>
             <h5>{ name }</h5>
@@ -40,8 +44,7 @@ export const Project2: React.FC<Props> = ( { name, link } ) => {
             <div className='icon--container'>
             
             <Icon className='icon' icon="uit:github-alt" height="22" 
-                onClick={(e: React.MouseEvent<Element, MouseEvent>) => {
-                    click(e, link, 'clicked git')}} />
+                onClick={ openGithubInNewWindow } />
             </div>
         </div>
     )
