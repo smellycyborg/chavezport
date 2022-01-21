@@ -8,7 +8,7 @@ const App: React.FC = () => {
 
   return <>
   <div>
-    <Header name='chavez' bio='software engineer'/>
+    <Header name='chavez' bio='programmer'/>
   </div>
 
   <div>
@@ -18,7 +18,9 @@ const App: React.FC = () => {
   <div>
     <Footer link1='https://github.com/spumdonut' 
     link2='https://www.linkedin.com/in/smellycyborg/' 
-    email='mailto:chavezworkmail@gmail.com'/>
+    email='mailto:chavezworkmail@gmail.com'
+    youtube='https://www.youtube.com/channel/UC2ljYS4OqG4F0-YMOrTkhVA'
+    />
   </div>
   </>
 }
